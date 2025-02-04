@@ -1,2 +1,3 @@
 # Проектная работа Mesto
-git@github.com:PolDe11a/mesto-project-ff.git
+
+https://github.com/PolDe11a/mesto-project-ff.git
