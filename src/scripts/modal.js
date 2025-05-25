@@ -19,14 +19,14 @@ export const closeModal = (modal) => {
 };
 
 //Вешаем слушатели
-export const addListener = (modal) => {
+export const addModalListener = (modal) => {
   const closeButton = modal.querySelector(".popup__close");
   closeButton.addEventListener("click", () => closeModal(modal));
 };
 
 //Закрытие по оверлею
-export function addOverlayListener(modal) {
-  modal.addEventListener("click", (evt) => {
+export const addOverlayListener = (modal) => {
+  modal.addEventListener("mousedown", (evt) => {
     if (evt.target === modal) {
       closeModal(modal);
     }
