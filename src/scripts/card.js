@@ -27,11 +27,13 @@ likeButton.addEventListener("click", () => likeCard(card._id, likeButton, likeCo
   return cardElement;
 }
 
-export const deleteCard = (cardId, cardElement) => {
-  deleteCurrentCard(cardId)
-    .then(() => {
-      cardElement.remove();
-    })
-    .catch(err => console.error('Ошибка при удалении карточки:', err));
+//Удалить карточку
+export const removeCard = (cardElement) => {cardElement.remove()};
+
+
+//Лайк
+export const setlike = (likeButton, likeCount, updatedCard) => {
+likeButton.classList.toggle("card__like-button_is-active");
+likeCount.textContent = updatedCard.likes.length;
 };
 

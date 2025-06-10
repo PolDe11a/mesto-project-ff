@@ -57,7 +57,6 @@ export function setEventListeners(formElement, config) {
 export function enableValidation(config) {
   const forms = Array.from(document.querySelectorAll(config.formSelector));
   forms.forEach(form => {
-    form.addEventListener('submit', evt => evt.preventDefault());
     setEventListeners(form, config);
   });
 }
